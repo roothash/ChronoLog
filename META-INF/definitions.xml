@@ -1,0 +1,52 @@
+<definitions>
+
+     <logtype name="common" >
+            <acceptedfile>.log,.txt</acceptedfile>
+    	    <maxcheckcounter>10</maxcheckcounter>
+    </logtype>
+    <logtype name="LOG4J"  >
+        <regex>(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2}).(\d{3}) (\w{3})(\+|\-)(\d{4})</regex>
+        <hastack>1</hastack>
+        <delim>lt@gt</delim>
+        <dateformat>yyyy-MM-dd HH:mm:ss.SSS 'GMT'Z</dateformat>
+        <ignoreline>#</ignoreline>
+        <defaultTZ>GMT</defaultTZ>
+        <textpattern>
+            <pattern>lt@gt DEBUG lt@gt</pattern>
+            <pattern>lt@gt ERROR lt@gt</pattern>
+            <pattern>lt@gt INFO lt@gt</pattern>
+            <pattern>lt@gt DBQUERY lt@gt</pattern>
+            <pattern>lt@gt PERF lt@gt</pattern>
+            <pattern>lt@gt TRACE lt@gt</pattern>
+            <pattern>lt@gt WARN lt@gt</pattern>
+        </textpattern>
+        <parserclass>com.caterpillar.parsers.Log4JParser</parserclass>
+    </logtype>
+    <logtype name="W3SVC" >
+        <regex>(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})</regex>
+        <hastack>0</hastack>
+        <delim> </delim>
+        <dateformat>yyyy-MM-dd HH:mm:ss</dateformat>
+        <ignoreline>#</ignoreline>
+        <defaultTZ>GMT</defaultTZ>
+		<textpattern>
+		    <pattern> W3SVC1 </pattern>
+		</textpattern>
+		<parserclass>com.caterpillar.parsers.W3SVCParser</parserclass>
+    </logtype>
+    <logtype name="WLACCESS"  >
+        <regex>(\d{2})/(\w{3})/(\d{4}):(\d{2}):(\d{2}):(\d{2}) (\+)(\d{4})</regex>
+        <hastack>0</hastack>
+        <delim> </delim>
+        <dateformat>dd/MMM/yyyy:HH:mm:ss Z</dateformat>
+        <ignoreline>#</ignoreline>
+        <defaultTZ>GMT</defaultTZ>
+        <textpattern>
+		    <pattern>ime Taken:</pattern>
+		</textpattern>
+		<parserclass>com.caterpillar.parsers.AccessLogParser</parserclass>
+    </logtype>
+</definitions>
+
+
+    

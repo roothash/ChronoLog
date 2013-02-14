@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="components/Pingu.java" kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="META-INF"/>
+	<classpathentry exported="true" kind="lib" path="images"/>
+	<classpathentry exported="true" kind="lib" path="D:/Roothash/workspace/eclipse/Old-Projects/CaterPillar/META-INF/jdom-2.0.4.jar" sourcepath="C:/Users/vkaivallya/.m2/repository/org/jdom/jdom2/2.0.4/jdom2-2.0.4-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
