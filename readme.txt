@@ -4,4 +4,4 @@ all the logs lines can be aggregated in one file chronologically.
 
 New parsers can be plugged in .
 
-The tool take care of stack traces as well for log4j files.
+The tool takes care of stack traces as well for log4j files.
